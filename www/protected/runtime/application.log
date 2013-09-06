@@ -1,0 +1,601 @@
+2013/09/06 03:40:45 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'hootbook.user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `user`.
+in C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php (13)
+2013/09/06 03:41:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'hootbook'@'localhost' (using password: YES)' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/model/index
+HTTP_REFERER=http://hootbook.dev/index.php?r=gii/model/index
+---
+2013/09/06 03:42:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'hootbook'@'localhost' (using password: YES)' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/model/index
+HTTP_REFERER=http://hootbook.dev/index.php?r=gii/model/index
+---
+2013/09/06 03:43:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'hootbook'@'localhost' (using password: YES)' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/model/index
+HTTP_REFERER=http://hootbook.dev/index.php?r=gii/default/index
+---
+2013/09/06 03:43:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'hootbook'@'localhost' (using password: YES)' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/model/index
+HTTP_REFERER=http://hootbook.dev/index.php?r=gii
+---
+2013/09/06 03:43:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'hootbook'@'localhost' (using password: YES)' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/model/index
+HTTP_REFERER=http://hootbook.dev/index.php?r=gii
+---
+2013/09/06 03:44:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/model/index
+HTTP_REFERER=http://hootbook.dev/index.php?r=gii
+---
+2013/09/06 03:46:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'hootbook'@'localhost' (using password: YES)' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/model/index
+---
+2013/09/06 03:47:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/model/index
+---
+2013/09/06 03:47:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/model/index
+---
+2013/09/06 03:47:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/model/index
+---
+2013/09/06 03:49:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/model/index
+---
+2013/09/06 03:49:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'hootbook'@'localhost' (using password: YES)' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/model/index
+---
+2013/09/06 03:49:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'hootbook'@'localhost' (using password: YES)' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/model/index
+---
+2013/09/06 03:49:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'hootbook'@'localhost' (using password: YES)' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/model/index
+---
+2013/09/06 03:49:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'hootbook'@'localhost' (using password: YES)' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/model/index
+---
+2013/09/06 03:49:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'hootbook'@'localhost' (using password: YES)' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/model/index
+---
+2013/09/06 03:51:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'hootbook'@'localhost' (using password: YES)' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/model/index
+---
+2013/09/06 03:53:49 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'hootbook.user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `User`.
+in C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php (13)
+2013/09/06 03:54:32 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'hootbook.user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `user`.
+in C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php (13)
+2013/09/06 03:59:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=user
+---
+2013/09/06 04:00:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=user
+---
+2013/09/06 04:00:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/?r=user
+---
+2013/09/06 04:00:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "User".' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('User')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/?r=User
+---
+2013/09/06 04:00:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "User".' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('User')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=User
+---
+2013/09/06 04:01:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=user
+---
+2013/09/06 04:05:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=user
+---
+2013/09/06 04:05:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "User".' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('User')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=User
+---
+2013/09/06 04:05:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "User".' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('User')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/?r=User
+---
+2013/09/06 04:05:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/?r=user
+---
+2013/09/06 04:05:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=user
+---
+2013/09/06 04:05:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=user
+---
+2013/09/06 04:31:12 [error] [exception.CDbException] exception 'CDbException' with message 'Adding a foreign key constraint to an existing table is not supported by SQLite.' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\schema\sqlite\CSqliteSchema.php:261
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbCommand.php(1435): CSqliteSchema->addForeignKey('user_fk', 'user', 'user_id', 'id', 'CASCADE', 'CASCADE', NULL)
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbMigration.php(348): CDbCommand->addForeignKey('user_fk', 'user', 'user_id', 'id', 'CASCADE', 'CASCADE', NULL)
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\migrations\m130906_031718_add_contact_table.php(17): CDbMigration->addForeignKey('user_fk', 'user', 'user_id', 'id', 'CASCADE', 'CASCADE')
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\cli\commands\MigrateCommand.php(385): m130906_031718_add_contact_table->up()
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m130906_031718_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\yiic.php(33): CApplication->run()
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\yiic.php(7): require_once('C:\Program File...')
+#12 {main}
+---
+2013/09/06 04:32:38 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'contact' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"user_id" integer NOT NULL,
+	"name" varchar(255) NOT NULL,
+	"phone_number" varchar(255) NOT NULL,
+	"twitter_handle" varchar(255) NOT NULL,
+	"created_at" DATETIME NOT NULL,
+	"update_at" DATETIME NOT NULL
+)
+2013/09/06 04:32:38 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 table 'contact' already exists. The SQL statement executed was: CREATE TABLE 'contact' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"user_id" integer NOT NULL,
+	"name" varchar(255) NOT NULL,
+	"phone_number" varchar(255) NOT NULL,
+	"twitter_handle" varchar(255) NOT NULL,
+	"created_at" DATETIME NOT NULL,
+	"update_at" DATETIME NOT NULL
+).
+2013/09/06 04:32:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 table 'contact' already exists. The SQL statement executed was: CREATE TABLE 'contact' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"user_id" integer NOT NULL,
+	"name" varchar(255) NOT NULL,
+	"phone_number" varchar(255) NOT NULL,
+	"twitter_handle" varchar(255) NOT NULL,
+	"created_at" DATETIME NOT NULL,
+	"update_at" DATETIME NOT NULL
+)' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbCommand.php(1324): CDbCommand->execute()
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbMigration.php(233): CDbCommand->createTable('contact', Array, NULL)
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\migrations\m130906_031718_add_contact_table.php(15): CDbMigration->createTable('contact', Array)
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\cli\commands\MigrateCommand.php(385): m130906_031718_add_contact_table->up()
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m130906_031718_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\yiic.php(33): CApplication->run()
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\yiic.php(7): require_once('C:\Program File...')
+#12 {main}
+---
+2013/09/06 04:42:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "User".' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('User')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=User
+---
+2013/09/06 04:42:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=user
+---
+2013/09/06 04:42:29 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'hootbook.user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `user`.
+in C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php (13)
+2013/09/06 04:45:20 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'hootbook.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2013/09/06 04:55:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=user
+---
+2013/09/06 05:25:26 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'contact'. The SQL statement executed was: DROP TABLE `contact`.
+2013/09/06 05:25:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'contact'. The SQL statement executed was: DROP TABLE `contact`' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbCommand.php(1347): CDbCommand->execute()
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbMigration.php(258): CDbCommand->dropTable('contact')
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\migrations\m130906_034602_add_contact_table.php(20): CDbMigration->dropTable('contact')
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\cli\commands\MigrateCommand.php(410): m130906_034602_add_contact_table->down()
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\cli\commands\MigrateCommand.php(145): MigrateCommand->migrateDown('m130906_034602_...')
+#5 [internal function]: MigrateCommand->actionDown(Array)
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\yiic.php(33): CApplication->run()
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\yiic.php(7): require_once('C:\Program File...')
+#12 {main}
+---
+2013/09/06 05:26:33 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'contact'. The SQL statement executed was: DROP TABLE `contact`.
+2013/09/06 05:26:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'contact'. The SQL statement executed was: DROP TABLE `contact`' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbCommand.php(1347): CDbCommand->execute()
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbMigration.php(258): CDbCommand->dropTable('contact')
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\migrations\m130906_034602_add_contact_table.php(20): CDbMigration->dropTable('contact')
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\cli\commands\MigrateCommand.php(410): m130906_034602_add_contact_table->down()
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\cli\commands\MigrateCommand.php(145): MigrateCommand->migrateDown('m130906_034602_...')
+#5 [internal function]: MigrateCommand->actionDown(Array)
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\yiic.php(33): CApplication->run()
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\yiic.php(7): require_once('C:\Program File...')
+#12 {main}
+---
+2013/09/06 05:26:44 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'hootbook.contact' doesn't exist. The SQL statement executed was: ALTER TABLE `contact` ADD `favorite` bool DEFAULT 0.
+2013/09/06 05:26:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'hootbook.contact' doesn't exist. The SQL statement executed was: ALTER TABLE `contact` ADD `favorite` bool DEFAULT 0' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbCommand.php(1377): CDbCommand->execute()
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\CDbMigration.php(286): CDbCommand->addColumn('contact', 'favorite', 'bool DEFAULT 0')
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\migrations\m130906_040625_add_contact_favourite_column.php(7): CDbMigration->addColumn('contact', 'favorite', 'bool DEFAULT 0')
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\cli\commands\MigrateCommand.php(385): m130906_040625_add_contact_favourite_column->up()
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m130906_040625_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\yiic.php(33): CApplication->run()
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\yiic.php(7): require_once('C:\Program File...')
+#12 {main}
+---
