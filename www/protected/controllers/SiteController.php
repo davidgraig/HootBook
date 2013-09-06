@@ -29,7 +29,28 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+
+
+
+        $settings = array(
+            'oauth_token' => '57733326-hwjCHLY0kJju0Gq5rdy4GU3VypSkX0OFqhyRGB0',
+            'oauth_token_secret' => '7ydmzP0NgO3bVKxoOSyXjcoM4dovDH4M7nXsloGI',
+            'consumer_key' => 'c8O9lC8jxNzApZiE1FtYQ',
+            'consumer_secret' => 'IEO7pxo9ybLaSiy2MzsxQkzHzaW79eyxA74EJLvfEw',
+            'output_format' => 'object'
+        );
+
+        $twitter = new TwitterOAuth($settings);
+
+        $response = $twitter->get('users/show', array(
+            'screen_name' => 'louisck',
+        ));
+
+        $rate = $twitter->get('application/rate_limit_status', array(
+            'resources' => 'users'
+        ));
+
+        $this->render('index');
 	}
 
 	/**

@@ -599,3 +599,17 @@ Stack trace:
 #11 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\yiic.php(7): require_once('C:\Program File...')
 #12 {main}
 ---
+2013/09/06 16:47:55 [error] [php] SSL certificate problem: unable to get local issuer certificate (C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\vendor\TwitterAPIExchange\TwitterAPIExchange.php:215)
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): SiteController->runAction()
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\vendor\TwitterAPIExchange\TwitterAPIExchange.php (215)
+in C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\controllers\SiteController.php (47)
+in C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php (13)
