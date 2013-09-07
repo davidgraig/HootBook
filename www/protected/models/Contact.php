@@ -18,6 +18,48 @@
  */
 class Contact extends CActiveRecord
 {
+
+    public function getFullName()
+    {
+        return $this->first_name . ' ' . $this->last_name;
+    }
+
+    public function getFollowers()
+    {
+        try
+        {
+            $settings = array(
+                'oauth_token' => '57733326-hwjCHLY0kJju0Gq5rdy4GU3VypSkX0OFqhyRGB0',
+                'oauth_token_secret' => '7ydmzP0NgO3bVKxoOSyXjcoM4dovDH4M7nXsloGI',
+                'consumer_key' => 'c8O9lC8jxNzApZiE1FtYQ',
+                'consumer_secret' => 'IEO7pxo9ybLaSiy2MzsxQkzHzaW79eyxA74EJLvfEw',
+                'output_format' => 'object'
+            );
+
+            $twitter = new TwitterOAuth($settings);
+
+            $response = $twitter->get('users/show', array(
+                'screen_name' => $this->twitter,
+                'include_entities' => false,
+            ));
+
+            $rate = $twitter->get('application/rate_limit_status', array(
+                'resources' => 'users'
+            ));
+
+            return $response->followers_count;
+        }
+        catch (TwitterException $ex)
+        {
+            if ($ex->getCode() == TwitterException::TWITTER_404_ERROR_CODE)
+            {
+                $this->addError('twitter', 'The twitter handle does not exist.');
+            }
+            return 0;
+        }
+
+    }
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -34,7 +76,7 @@ class Contact extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('user_id, first_name, last_name, phone, twitter, created_at', 'required'),
+			array('user_id, first_name, last_name, phone, twitter', 'required'),
 			array('user_id, phone, favorite', 'numerical', 'integerOnly'=>true),
 			array('first_name, last_name, twitter', 'length', 'max'=>255),
 			// The following rule is used by search().
@@ -62,9 +104,10 @@ class Contact extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'user_id' => 'User',
+			'user_id' => 'User ID',
 			'first_name' => 'First Name',
 			'last_name' => 'Last Name',
+            'full_name' => 'Name',
 			'phone' => 'Phone',
 			'twitter' => 'Twitter',
 			'favorite' => 'Favorite',

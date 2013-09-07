@@ -9,7 +9,7 @@ class m130906_034602_add_contact_table extends CDbMigration
             'user_id' => 'integer NOT NULL',
             'first_name' => 'string NOT NULL',
             'last_name' => 'string NOT NULL',
-            'phone' => 'integer NOT NULL',
+            'phone' => 'string NOT NULL',
             'twitter' => 'string NOT NULL',
             'favorite' => 'boolean NOT NULL DEFAULT 0',
             'created_at' => 'DATETIME NOT NULL',

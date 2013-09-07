@@ -9,27 +9,16 @@
  */
 
 
-
-use TwitterOAuth\Exception\TwitterException;
-
 class TwitterOAuth
 {
     protected $url = 'https://api.twitter.com/1.1/';
-
     protected $outputFormats = array('text', 'json', 'array', 'object');
-
     protected $defaultFormat = 'object';
-
     protected $config = array();
-
     protected $call = '';
-
     protected $method = 'GET';
-
     protected $getParams = array();
-
     protected $postParams = array();
-
 
     /**
      * Prepare a new conection with Twitter API via OAuth
@@ -252,7 +241,7 @@ class TwitterOAuth
      *
      * @param string $type Depends of response format (array|object)
      * @param mixed $ex Exceptions
-     * @throws Exception\TwitterException
+     * @throws TwitterException
      */
     protected function processExceptions($type, $ex)
     {
@@ -333,7 +322,7 @@ class TwitterOAuth
     /**
      *  Send GET or POST requests to Twitter API
      *
-     * @throws Exception\TwitterException
+     * @throws TwitterException
      * @return mixed Response output
      */
     protected function sendRequest()

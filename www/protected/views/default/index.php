@@ -1,59 +1,12 @@
-<?php
-/* @var $this DefaultController */
+<h1>Contacts</h1>
 
-$this->breadcrumbs = array(
-    'Default',
-);
-?>
+<?php $this->widget('zii.widgets.CListView', array('dataProvider' => $dataProvider, 'itemView' => '_contactViewPartial', 'emptyText' => "You don't have any contacts.")); ?>
 
-<h1>Login</h1>
+<div class="view form">
 
-<p>Please fill out the following form with your login credentials:</p>
-
-<div class="form">
     <?php $form = $this->beginWidget('CActiveForm', array(
-        'id' => 'login-form',
-        'action' => Yii::app()->createUrl('default/login'),
-        'enableClientValidation' => true,
-        'clientOptions' => array(
-            'validateOnSubmit' => true,
-        ),
-    )); ?>
-
-    <p class="note">Fields with <span class="required">*</span> are required.</p>
-
-    <div class="row">
-        <?php echo $form->labelEx($loginForm, 'email'); ?>
-        <?php echo $form->textField($loginForm, 'email'); ?>
-        <?php echo $form->error($loginForm, 'email'); ?>
-    </div>
-
-    <div class="row">
-        <?php echo $form->labelEx($loginForm, 'password'); ?>
-        <?php echo $form->passwordField($loginForm, 'password'); ?>
-        <?php echo $form->error($loginForm, 'password'); ?>
-    </div>
-
-    <div class="row rememberMe">
-        <?php echo $form->checkBox($loginForm, 'rememberMe'); ?>
-        <?php echo $form->label($loginForm, 'rememberMe'); ?>
-        <?php echo $form->error($loginForm, 'rememberMe'); ?>
-    </div>
-
-    <div class="row buttons">
-        <?php echo CHtml::submitButton('Login'); ?>
-    </div>
-
-    <?php $this->endWidget(); ?>
-</div><!-- form -->
-
-<h1>Register</h1>
-
-<div class="form">
-
-    <?php $register = $this->beginWidget('CActiveForm', array(
-        'id' => 'registration-form',
-        'action' => Yii::app()->createUrl('default/register'),
+        'id' => 'create-contact-form',
+        'action' => Yii::app()->createUrl('contact/create'),
         'enableClientValidation' => true,
         'clientOptions' => array(
             'validateOnSubmit' => true,
@@ -61,35 +14,33 @@ $this->breadcrumbs = array(
     )); ?>
 
     <div class="row">
-        <?php echo $register->labelEx($registerForm, 'name'); ?>
-        <?php echo $register->textField($registerForm, 'name'); ?>
-        <?php echo $register->error($registerForm, 'name'); ?>
+        <?php echo $form->labelEx($contact, 'first_name'); ?>
+        <?php echo $form->textField($contact, 'first_name'); ?>
+        <?php echo $form->error($contact, 'first_name'); ?>
     </div>
+
     <div class="row">
-        <?php echo $register->labelEx($registerForm, 'email'); ?>
-        <?php echo $register->emailField($registerForm, 'email'); ?>
-        <?php echo $register->error($registerForm, 'email'); ?>
+        <?php echo $form->labelEx($contact, 'last_name'); ?>
+        <?php echo $form->textField($contact, 'last_name'); ?>
+        <?php echo $form->error($contact, 'last_name'); ?>
     </div>
+
     <div class="row">
-        <?php echo $register->labelEx($registerForm, 'password'); ?>
-        <?php echo $register->passwordField($registerForm, 'password'); ?>
-        <?php echo $register->error($registerForm, 'password'); ?>
+        <?php echo $form->labelEx($contact, 'phone'); ?>
+        <?php echo $form->textField($contact, 'phone'); ?>
+        <?php echo $form->error($contact, 'phone'); ?>
     </div>
-    <?php if (CCaptcha::checkRequirements()): ?>
-        <div class="row">
-            <?php echo $register->labelEx($registerForm, 'verifyCode'); ?>
-            <div>
-                <?php $this->widget('CCaptcha'); ?>
-                <?php echo $register->textField($registerForm, 'verifyCode'); ?>
-            </div>
-            <div class="hint">Please enter the letters as they are shown in the image above.
-                <br/>Letters are not case-sensitive.
-            </div>
-            <?php echo $register->error($registerForm, 'verifyCode'); ?>
-        </div>
-    <?php endif; ?>
+
+    <div class="row">
+        <?php echo $form->labelEx($contact, 'twitter'); ?>
+        <?php echo $form->textField($contact, 'twitter'); ?>
+        <?php echo $form->error($contact, 'twitter'); ?>
+    </div>
+
     <div class="row buttons">
-        <?php echo CHtml::submitButton('Register'); ?>
+        <?php echo CHtml::submitButton('Add'); ?>
     </div>
+
     <?php $this->endWidget(); ?>
+
 </div>

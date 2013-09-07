@@ -16,6 +16,7 @@ return array(
         'application.models.*',
         'application.components.*',
         'application.vendor.TwitterOAuth.*',
+        'application.vendor.TwitterOAuth.Exception.*',
     ),
 
     'modules' => array(
@@ -46,10 +47,6 @@ return array(
                 '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
             ),
-        ),
-
-        'db' => array(
-            'connectionString' => 'sqlite:' . dirname(__FILE__) . '/../data/testdrive.db',
         ),
         // uncomment the following to use a MySQL database
         'db' => array(

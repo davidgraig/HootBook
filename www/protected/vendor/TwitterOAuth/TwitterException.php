@@ -10,6 +10,9 @@
 
 class TwitterException extends \Exception
 {
+
+    const TWITTER_404_ERROR_CODE = 34;
+
     public function __toString()
     {
         return "Twitter API Response: [{$this->code}] {$this->message} (" . __CLASS__ . ") ";
