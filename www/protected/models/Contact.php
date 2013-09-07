@@ -6,7 +6,8 @@
  * The followings are the available columns in table 'contact':
  * @property integer $id
  * @property integer $user_id
- * @property string $name
+ * @property string $first_name
+ * @property string $last_name
  * @property integer $phone
  * @property string $twitter
  * @property integer $favorite
@@ -33,12 +34,12 @@ class Contact extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('user_id, name, phone, twitter, created_at', 'required'),
+			array('user_id, first_name, last_name, phone, twitter, created_at', 'required'),
 			array('user_id, phone, favorite', 'numerical', 'integerOnly'=>true),
-			array('name, twitter', 'length', 'max'=>255),
+			array('first_name, last_name, twitter', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, user_id, name, phone, twitter, favorite, created_at', 'safe', 'on'=>'search'),
+			array('id, user_id, first_name, last_name, phone, twitter, favorite, created_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,7 +63,8 @@ class Contact extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'user_id' => 'User',
-			'name' => 'Name',
+			'first_name' => 'First Name',
+			'last_name' => 'Last Name',
 			'phone' => 'Phone',
 			'twitter' => 'Twitter',
 			'favorite' => 'Favorite',
@@ -90,7 +92,8 @@ class Contact extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('user_id',$this->user_id);
-		$criteria->compare('name',$this->name,true);
+		$criteria->compare('first_name',$this->first_name,true);
+		$criteria->compare('last_name',$this->last_name,true);
 		$criteria->compare('phone',$this->phone);
 		$criteria->compare('twitter',$this->twitter,true);
 		$criteria->compare('favorite',$this->favorite);

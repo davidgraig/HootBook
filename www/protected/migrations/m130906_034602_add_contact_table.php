@@ -7,7 +7,8 @@ class m130906_034602_add_contact_table extends CDbMigration
         $this->createTable('contact', array(
             'id' => 'pk',
             'user_id' => 'integer NOT NULL',
-            'name' => 'string NOT NULL',
+            'first_name' => 'string NOT NULL',
+            'last_name' => 'string NOT NULL',
             'phone' => 'integer NOT NULL',
             'twitter' => 'string NOT NULL',
             'favorite' => 'boolean NOT NULL DEFAULT 0',

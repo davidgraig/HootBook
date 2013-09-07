@@ -6,7 +6,6 @@ class m130906_033817_add_user_table extends CDbMigration
 	{
         $this->createTable('user', array(
             'id' => 'pk',
-            'username' => 'string NOT NULL',
             'name' => 'string NOT NULL',
             'password' => 'string NOT NULL',
             'email' => 'string NOT NULL',

@@ -43,6 +43,17 @@
 		)); ?><!-- breadcrumbs -->
 	<?php endif?>
 
+    <?php
+        foreach(Yii::app()->user->getFlashes() as $key => $message) :
+            foreach($message as $flash):
+    ?>
+
+           <div class="flash-<?php echo $key?>"><?php echo $flash; ?></div><br/>
+    <?php
+            endforeach;
+        endforeach;
+    ?>
+
 	<?php echo $content; ?>
 
 	<div class="clear"></div>

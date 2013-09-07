@@ -613,3 +613,255 @@ REQUEST_URI=/
 in C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\vendor\TwitterAPIExchange\TwitterAPIExchange.php (215)
 in C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\controllers\SiteController.php (47)
 in C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php (13)
+2013/09/06 20:13:15 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'hootbook.user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `user`.
+in C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php (13)
+2013/09/06 20:25:57 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.newUsername" is not defined.' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\helpers\CHtml.php(2529): CComponent->__get('newUsername')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(LoginForm), 'newUsername')
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(LoginForm), 'newUsername', Array)
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(LoginForm), 'newUsername', Array)
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\views\site\login.php(64): CActiveForm->textField(Object(LoginForm), 'newUsername')
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CBaseController.php(126): require('C:\Program File...')
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Program File...', Array, true)
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\Program File...', Array, true)
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\controllers\SiteController.php(113): CController->render('login', Array)
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#15 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/site/login
+---
+2013/09/06 22:42:21 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.newUsername" is not defined.' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\helpers\CHtml.php(2529): CComponent->__get('newUsername')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(LoginForm), 'newUsername')
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(LoginForm), 'newUsername', Array)
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(LoginForm), 'newUsername', Array)
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\views\site\login.php(64): CActiveForm->textField(Object(LoginForm), 'newUsername')
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CBaseController.php(126): require('C:\Program File...')
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Program File...', Array, true)
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\Program File...', Array, true)
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\controllers\SiteController.php(113): CController->render('login', Array)
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#15 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://hootbook.dev/
+---
+2013/09/06 22:50:57 [error] [exception.CException] exception 'CException' with message 'Property "RegisterForm.username" is not defined.' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\helpers\CHtml.php(2529): CComponent->__get('username')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(RegisterForm), 'username')
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(RegisterForm), 'username', Array)
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(RegisterForm), 'username', Array)
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\views\site\login.php(64): CActiveForm->textField(Object(RegisterForm), 'username')
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CBaseController.php(126): require('C:\Program File...')
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Program File...', Array, true)
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\Program File...', Array, true)
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\controllers\SiteController.php(132): CController->render('login', Array)
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#15 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://hootbook.dev/
+---
+2013/09/06 22:57:50 [error] [exception.CException] exception 'CException' with message 'Property "RegisterForm.name" is not defined.' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\helpers\CHtml.php(2529): CComponent->__get('name')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(RegisterForm), 'name')
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(RegisterForm), 'name', Array)
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(RegisterForm), 'name', Array)
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\views\site\login.php(65): CActiveForm->textField(Object(RegisterForm), 'name')
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CBaseController.php(126): require('C:\Program File...')
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Program File...', Array, true)
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\Program File...', Array, true)
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\controllers\SiteController.php(132): CController->render('login', Array)
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#15 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://hootbook.dev/
+---
+2013/09/06 23:40:06 [error] [exception.CException] exception 'CException' with message 'Property "RegisterForm.verifyCode" is not defined.' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\validators\CCaptchaValidator.php(46): CComponent->__get('verifyCode')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\validators\CValidator.php(213): CCaptchaValidator->validateAttribute(Object(RegisterForm), 'verifyCode')
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModel.php(159): CValidator->validate(Object(RegisterForm), NULL)
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\controllers\SiteController.php(123): CModel->validate()
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://hootbook.dev/site/login
+---
+2013/09/06 23:51:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/09/07 00:46:54 [error] [exception.CException] exception 'CException' with message 'Property "CHttpRequest.enabledCsrfValidation" is not defined.' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\YiiBase.php(220): CComponent->__set('enabledCsrfVali...', true)
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(513): CModule->getComponent('request')
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(545): CApplication->getRequest()
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(165): CWebApplication->init()
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\YiiBase.php(125): CApplication->__construct('C:\Program File...')
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\YiiBase.php(98): YiiBase::createApplication('CWebApplication', 'C:\Program File...')
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): YiiBase::createWebApplication('C:\Program File...')
+#8 {main}
+REQUEST_URI=/site/login
+---
+2013/09/07 03:14:57 [error] [exception.CException] exception 'CException' with message 'CCaptchaValidator.action "captcha" is invalid. Unable to find such an action in the current controller.' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\validators\CCaptchaValidator.php:77
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\validators\CCaptchaValidator.php(93): CCaptchaValidator->getCaptchaAction()
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\widgets\CActiveForm.php(510): CCaptchaValidator->clientValidateAttribute(Object(RegisterForm), 'verifyCode')
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\views\default\index.php(85): CActiveForm->error(Object(RegisterForm), 'verifyCode')
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CBaseController.php(126): require('C:\Program File...')
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Program File...', Array, true)
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\Program File...', Array, true)
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\controllers\DefaultController.php(13): CController->render('index', Array)
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/
+---
+2013/09/07 03:25:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "register".' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('register')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/register
+HTTP_REFERER=http://hootbook.dev/
+---
+2013/09/07 03:27:04 [error] [exception.CException] exception 'CException' with message 'Property "DefaultController.email" is not defined.' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\controllers\DefaultController.php(48): CComponent->__get('email')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionRegister()
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('register')
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('default/registe...')
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/default/register
+HTTP_REFERER=http://hootbook.dev/
+---
+2013/09/07 03:58:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login".' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('login')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/login
+HTTP_REFERER=http://hootbook.dev/
+---
+2013/09/07 03:59:28 [error] [exception.CDbException] exception 'CDbException' with message 'Table "user" does not have a column named "username".' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\schema\CDbCommandBuilder.php:694
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\ar\CActiveRecord.php(1518): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\components\UserIdentity.php(25): CActiveRecord->findByAttributes(Array)
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\models\LoginForm.php(51): UserIdentity->authenticate()
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\controllers\DefaultController.php(29): CModel->validate()
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionLogin()
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('default/login')
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/default/login
+HTTP_REFERER=http://hootbook.dev/
+---
+2013/09/07 04:03:11 [error] [exception.CDbException] exception 'CDbException' with message 'Table "user" does not have a column named "username".' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\schema\CDbCommandBuilder.php:694
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\db\ar\CActiveRecord.php(1518): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\components\UserIdentity.php(25): CActiveRecord->findByAttributes(Array)
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\models\LoginForm.php(51): UserIdentity->authenticate()
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\controllers\DefaultController.php(29): CModel->validate()
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionLogin()
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('default/login')
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/default/login
+HTTP_REFERER=http://hootbook.dev/
+---
+2013/09/07 04:03:59 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.email" is not defined.' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\components\UserIdentity.php(25): CComponent->__get('email')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\models\LoginForm.php(51): UserIdentity->authenticate()
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\controllers\DefaultController.php(29): CModel->validate()
+#6 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionLogin()
+#7 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('default/login')
+#12 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/default/login
+HTTP_REFERER=http://hootbook.dev/
+---
