@@ -19,6 +19,14 @@
 class Contact extends CActiveRecord
 {
 
+    const NO_IMAGE_URL = '/images/no-twitter-image.png';
+
+    public function getTwitterImage()
+    {
+        $record = TwitterCache::model()->findByAttributes(array('handle' => $this->twitter));
+        return $record->image == null ? Contact::NO_IMAGE_URL : $record->image;
+    }
+
     public function getFullName()
     {
         return $this->first_name . ' ' . $this->last_name;
@@ -39,7 +47,7 @@ class Contact extends CActiveRecord
     {
         return array(
             array('user_id, first_name, last_name, phone, twitter', 'required'),
-            array('user_id, phone, favorite', 'numerical', 'integerOnly' => true),
+            array('user_id, favorite', 'numerical', 'integerOnly' => true),
             array('first_name, last_name, twitter', 'length', 'max' => 255),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.

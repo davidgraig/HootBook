@@ -9,6 +9,8 @@ class ContactController extends Controller
         if (isset($_POST['Contact'])) {
             $model->attributes = $_POST['Contact'];
             $model->user_id = $userId;
+            $model->twitter = ltrim($model->twitter, '@');
+
             if ($model->save()) {
                 $this->updateTwitterCache($model);
 
@@ -32,6 +34,9 @@ class ContactController extends Controller
 
         if (isset($_POST['Contact'])) {
             $model->attributes = $_POST['Contact'];
+
+            $model->twitter = ltrim($model->twitter, '@');
+
             if ($model->save()) {
 
                 $this->updateTwitterCache($model);
@@ -94,6 +99,8 @@ class ContactController extends Controller
         {
             $twitter_cache = new TwitterCache;
             $twitter_cache->handle = $model->twitter;
+            $twitter_cache->followers = TwitterCache::NEVER_UPDATED;
+            $twitter_cache->last_update = TwitterCache::NEVER_UPDATED;
             $twitter_cache->save();
         }
     }

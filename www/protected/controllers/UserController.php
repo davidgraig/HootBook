@@ -41,10 +41,12 @@ class UserController extends Controller
 	{
         if (Yii::app()->user->id == $id)
         {
+
             $model = $this->loadModel($id);
-            $oldPassHash = $model->password;
+
             if(isset($_POST['User']))
             {
+                $oldPassHash = $model->password;
                 $model->attributes=$_POST['User'];
 
                 $model->password = $model->password === null ? $oldPassHash : CPasswordHelper::hashPassword($model->password);
@@ -52,15 +54,29 @@ class UserController extends Controller
                 if($model->save())
                 {
                     Yii::app()->user->setFlash('success', 'Profile updated, please logout and log back in to see your changes.');
-                    $this->redirect(Yii::app()->user->returnUrl);
+                    $this->redirect(Yii::app()->getHomeUrl());
                 }
-
             }
-            else
+            else if (isset($_POST['delete']))
             {
-                $model->password = '';
+
+                $delete = $_POST['delete'];
+
+                if ($delete == strtolower('delete'))
+                {
+                    $this->loadModel($id)->delete();
+                    Yii::app()->user->setFlash('success', 'You have closed your HootBook account');
+                    Yii::app()->user->logout();
+                    $this->redirect(Yii::app()->getHomeUrl());
+                    return;
+                }
+                else
+                {
+                    Yii::app()->user->setFlash('notice', 'You did not delete your account, please type &quot;delete&quot; into the delete text field.');
+                }
             }
 
+            $model->password = '';
             $this->render('update',array(
                 'model'=>$model,
             ));
@@ -68,31 +84,9 @@ class UserController extends Controller
         else
         {
             Yii::app()->user->setFlash('error', 'You do not have access to do that');
-            $this->redirect(Yii::app()->user->returnUrl);
+            $this->redirect(Yii::app()->getHomeUrl());
         }
 	}
-
-	/**
-	 * Deletes a particular model.
-	 * If deletion is successful, the browser will be redirected to the 'admin' page.
-	 * @param integer $id the ID of the model to be deleted
-	 */
-	public function actionDelete($id)
-	{
-        if (Yii::app()->user->id == $id)
-        {
-            $this->loadModel($id)->delete();
-            Yii::app()->user->setFlash('success', 'You have closed your HootBook account');
-            Yii::app()->user->logout();
-        }
-        else
-        {
-            Yii::app()->user->setFlash('error', 'You do not have access to do that');
-            $this->redirect(Yii::app()->user->returnUrl);
-        }
-	}
-
-
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.

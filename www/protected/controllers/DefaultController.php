@@ -53,7 +53,7 @@ class DefaultController extends Controller
             }
         }
 
-        $this->redirect(Yii::app()->user->returnUrl);
+        $this->redirect(Yii::app()->getHomeUrl());
     }
 
     public function actionRegister()
@@ -91,14 +91,14 @@ class DefaultController extends Controller
             Yii::app()->user->setFlash('error', "Nothing was submitted");
         }
 
-        $this->redirect(Yii::app()->user->returnUrl);
+        $this->redirect(Yii::app()->getHomeUrl());
 
     }
 
     public function actionLogout()
     {
         Yii::app()->user->logout();
-        $this->redirect(Yii::app()->homeUrl);
+        $this->redirect(Yii::app()->getHomeUrl());
     }
 
     public function actions()

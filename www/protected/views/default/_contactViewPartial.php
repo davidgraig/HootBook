@@ -6,6 +6,7 @@
 
 <div class="view">
 
+    <?php echo CHtml::image($data->getTwitterImage()); ?>
     <?php echo CHtml::encode($data->getFullName()); ?>
     <br />
 
@@ -14,7 +15,7 @@
     <br />
 
     <b><?php echo CHtml::encode($data->getAttributeLabel('twitter')); ?>:</b>
-    <?php echo CHtml::encode($data->twitter); ?>
+    @<?php echo CHtml::encode($data->twitter); ?>
     <br />
 
     <b><?php echo CHtml::encode('Followers:'); ?></b>

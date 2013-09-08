@@ -35,7 +35,12 @@ $this->widget('zii.widgets.CListView', array(
 
     <div class="row">
         <?php echo $form->labelEx($newContact, 'phone'); ?>
-        <?php echo $form->textField($newContact, 'phone'); ?>
+        <?php $this->widget('CMaskedTextField', array(
+            'model' => $newContact,
+            'attribute' => 'phone',
+            'mask' => '(999) 999-9999',
+            'htmlOptions' => array('size' => 10)
+        )); ?>
         <?php echo $form->error($newContact, 'phone'); ?>
     </div>
 
