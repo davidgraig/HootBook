@@ -15,6 +15,7 @@ class m130906_034602_add_contact_table extends CDbMigration
             'created_at' => 'DATETIME NOT NULL',
         ));
         $this->addForeignKey('user_contact_fk', 'contact', 'user_id', 'user', 'id', 'CASCADE', 'CASCADE');
+
 	}
 
 	public function down()

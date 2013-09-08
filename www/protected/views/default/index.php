@@ -1,6 +1,14 @@
 <h1>Contacts</h1>
 
-<?php $this->widget('zii.widgets.CListView', array('dataProvider' => $dataProvider, 'itemView' => '_contactViewPartial', 'emptyText' => "You don't have any contacts.")); ?>
+<?php
+$this->widget('zii.widgets.CListView', array(
+        'dataProvider' => $dataProvider,
+        'itemView' => '_contactViewPartial',
+        'emptyText' => "You don't have any contacts.",
+        'enablePagination' => true,
+    )
+);
+?>
 
 <div class="view form">
 
@@ -14,27 +22,27 @@
     )); ?>
 
     <div class="row">
-        <?php echo $form->labelEx($contact, 'first_name'); ?>
-        <?php echo $form->textField($contact, 'first_name'); ?>
-        <?php echo $form->error($contact, 'first_name'); ?>
+        <?php echo $form->labelEx($newContact, 'first_name'); ?>
+        <?php echo $form->textField($newContact, 'first_name'); ?>
+        <?php echo $form->error($newContact, 'first_name'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($contact, 'last_name'); ?>
-        <?php echo $form->textField($contact, 'last_name'); ?>
-        <?php echo $form->error($contact, 'last_name'); ?>
+        <?php echo $form->labelEx($newContact, 'last_name'); ?>
+        <?php echo $form->textField($newContact, 'last_name'); ?>
+        <?php echo $form->error($newContact, 'last_name'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($contact, 'phone'); ?>
-        <?php echo $form->textField($contact, 'phone'); ?>
-        <?php echo $form->error($contact, 'phone'); ?>
+        <?php echo $form->labelEx($newContact, 'phone'); ?>
+        <?php echo $form->textField($newContact, 'phone'); ?>
+        <?php echo $form->error($newContact, 'phone'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($contact, 'twitter'); ?>
-        <?php echo $form->textField($contact, 'twitter'); ?>
-        <?php echo $form->error($contact, 'twitter'); ?>
+        <?php echo $form->labelEx($newContact, 'twitter'); ?>
+        <?php echo $form->textField($newContact, 'twitter'); ?>
+        <?php echo $form->error($newContact, 'twitter'); ?>
     </div>
 
     <div class="row buttons">

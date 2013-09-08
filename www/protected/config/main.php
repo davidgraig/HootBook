@@ -18,7 +18,6 @@ return array(
         'application.vendor.TwitterOAuth.*',
         'application.vendor.TwitterOAuth.Exception.*',
     ),
-
     'modules' => array(
         // uncomment the following to enable the Gii tool
         'gii' => array(

@@ -11,6 +11,13 @@
 
 class TwitterOAuth
 {
+    const LIMIT = 180;
+    const TOKEN = '57733326-hwjCHLY0kJju0Gq5rdy4GU3VypSkX0OFqhyRGB0';
+    const TOKEN_SECRET = '7ydmzP0NgO3bVKxoOSyXjcoM4dovDH4M7nXsloGI';
+    const CONSUMER = 'c8O9lC8jxNzApZiE1FtYQ';
+    const CONSUMER_SECRET = 'IEO7pxo9ybLaSiy2MzsxQkzHzaW79eyxA74EJLvfEw';
+
+
     protected $url = 'https://api.twitter.com/1.1/';
     protected $outputFormats = array('text', 'json', 'array', 'object');
     protected $defaultFormat = 'object';
