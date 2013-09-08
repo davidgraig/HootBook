@@ -17,6 +17,7 @@ class DefaultController extends Controller
 
             $dataProvider = new CActiveDataProvider('Contact', array(
                 'criteria' => array(
+                    'condition' => 'user_id = ' . Yii::app()->user->id,
                     'order' => 'last_name DESC',
                 ),
                 'pagination' => array(
