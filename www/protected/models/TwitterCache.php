@@ -69,6 +69,7 @@ class TwitterCache extends CActiveRecord
             foreach ($cacheArray as $nonExistingTwitterHandle)
             {
                 $nonExistingTwitterHandle->followers = TwitterCache::INVALID_HANDLE;
+                $hootBookTwitterCacheItem->last_update = time();
                 $nonExistingTwitterHandle->save();
             }
 
