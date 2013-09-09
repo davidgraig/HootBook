@@ -2,3 +2,25 @@
 in C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\models\TwitterCache.php (80)
 in C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\controllers\DefaultController.php (16)
 in C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php (13)
+2013/09/09 04:51:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index".' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('index')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index
+HTTP_REFERER=http://hootbook.dev/
+---
+2013/09/09 04:51:06 [error] [application] Unable to resolve the request "index".
+in C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\controllers\DefaultController.php (122)
+2013/09/09 04:51:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index".' in C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('index')
+#1 C:\Program Files (x86)\Ampps\www\hootbook.dev\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Program Files (x86)\Ampps\www\hootbook.dev\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index
+HTTP_REFERER=http://hootbook.dev/
+---
+2013/09/09 04:51:29 [error] [application] Unable to resolve the request "index".
+in C:\Program Files (x86)\Ampps\www\hootbook.dev\www\protected\controllers\DefaultController.php (122)
