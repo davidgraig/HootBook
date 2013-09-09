@@ -1,8 +1,6 @@
-<h1>Login</h1>
-
-<p>Please fill out the following form with your login credentials:</p>
-
-<div class="form">
+<?php $this->pageTitle = Yii::app()->name; ?>
+<div class="login form">
+    <h2>Login</h2>
     <?php $form = $this->beginWidget('CActiveForm', array(
         'id' => 'login-form',
         'action' => Yii::app()->createUrl('default/login'),
@@ -39,10 +37,8 @@
     <?php $this->endWidget(); ?>
 </div><!-- form -->
 
-<h1>Register</h1>
-
-<div class="form">
-
+<div class="register form">
+<h2>Register</h2>
     <?php $register = $this->beginWidget('CActiveForm', array(
         'id' => 'registration-form',
         'action' => Yii::app()->createUrl('default/register'),
@@ -71,11 +67,8 @@
         <div class="row">
             <?php echo $register->labelEx($registerForm, 'verifyCode'); ?>
             <div>
-                <?php $this->widget('CCaptcha'); ?>
+                <div id="register-captcha"><?php $this->widget('CCaptcha'); ?></div>
                 <?php echo $register->textField($registerForm, 'verifyCode'); ?>
-            </div>
-            <div class="hint">Please enter the letters as they are shown in the image above.
-                <br/>Letters are not case-sensitive.
             </div>
             <?php echo $register->error($registerForm, 'verifyCode'); ?>
         </div>

@@ -1,4 +1,6 @@
-<h1>Edit Profile</h1>
+<?php $this->pageTitle = Yii::app()->name . ' - Update ' . $model->name; ?>
+
+<h2>Edit Profile</h2>
 <?php echo CHtml::link('Back to Contacts', '/default/index'); ?>
 <br/>
 <br/>

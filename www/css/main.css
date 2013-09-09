@@ -300,3 +300,13 @@ div.search-form
 #add-contact-form .buttons {
     margin: 14px 0 0;
 }
+
+div.form.login, div.form.register {
+    float: left;
+    width: 200px;
+}
+
+div#register-captcha a {
+    display: block;
+    font-size: 10px;
+}

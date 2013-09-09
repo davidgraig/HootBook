@@ -1,5 +1,7 @@
 <?php
 
+$this->pageTitle = Yii::app()->name;
+
 Yii::app()->clientScript->registerScript('search',
     "var ajaxUpdateTimeout;
     var ajaxRequest;

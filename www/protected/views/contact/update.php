@@ -1,3 +1,5 @@
+<?php $this->pageTitle = Yii::app()->name . ' - Update ' . $model->getFullName(); ?>
+
 <h2><?php echo $model->getFullName(); ?></h2>
 
 <div class="form">
