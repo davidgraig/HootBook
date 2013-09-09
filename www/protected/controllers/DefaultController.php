@@ -1,7 +1,11 @@
 <?php
 
+/**
+ * Class DefaultController - Main controller for application flow: login/out
+ */
 class DefaultController extends Controller
 {
+
     public function actionIndex($search = '')
     {
         if (Yii::app()->user->isGuest) {
@@ -40,10 +44,6 @@ class DefaultController extends Controller
     public function actionLogin()
     {
         $loginForm = new LoginForm;
-        if (isset($_POST['ajax']) && $_POST['ajax'] === 'login-form') {
-            echo CActiveForm::validate($loginForm);
-            Yii::app()->end();
-        }
 
         if (isset($_POST['LoginForm'])) {
             $loginForm->attributes = $_POST['LoginForm'];
@@ -63,10 +63,6 @@ class DefaultController extends Controller
     public function actionRegister()
     {
         $registerForm = new RegisterForm;
-        if (isset($_POST['ajax']) && $_POST['ajax'] == 'registration-form') {
-            echo CActiveForm::validate($registerForm);
-            Yii::app()->end();
-        }
 
         if (isset($_POST['RegisterForm'])) {
             $registerForm->attributes = $_POST['RegisterForm'];
@@ -99,6 +95,7 @@ class DefaultController extends Controller
 
     }
 
+
     public function actionLogout()
     {
         Yii::app()->user->logout();
@@ -126,10 +123,9 @@ class DefaultController extends Controller
     }
 
 
-
-
-
-
+    /**
+     * Declares actions defined in other classes
+     */
     public function actions()
     {
         return array(
