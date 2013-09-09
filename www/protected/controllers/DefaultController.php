@@ -17,7 +17,7 @@ class DefaultController extends Controller
 
             $dataProvider = new CActiveDataProvider('Contact', array(
                 'pagination' => array(
-                    'pageSize' => 5,
+                    'pageSize' => 8,
                 ),
             ));
 
@@ -110,11 +110,25 @@ class DefaultController extends Controller
         if($error=Yii::app()->errorHandler->error)
         {
             if(Yii::app()->request->isAjaxRequest)
-                echo $error['message'];
+            {
+                echo $error['message'];;
+
+            }
             else
+            {
                 $this->render('error', $error);
+            }
+
+            Yii::log($error['message'], 'error');
+            Yii::trace($error['message']);
+
         }
     }
+
+
+
+
+
 
     public function actions()
     {

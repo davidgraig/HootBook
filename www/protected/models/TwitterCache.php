@@ -75,8 +75,9 @@ class TwitterCache extends CActiveRecord
         }
         catch (TwitterException $ex)
         {
-            // set a timeout to check before bothering to refresh the cache
-            $foo = bar;
+            Yii::app()->user->setFlash('error', "There was an error getting data from Twitter");
+            Yii::log($ex, "error");
+            Yii::trace($ex);
         }
 
     }

@@ -310,3 +310,8 @@ div#register-captcha a {
     display: block;
     font-size: 10px;
 }
+
+div.list-view div.items .empty
+{
+    margin-left: 20px;
+}

@@ -56,10 +56,7 @@ class ContactController extends Controller
     public function actionDelete($id)
     {
         $this->loadModel($id)->delete();
-
-        // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-        if (!isset($_GET['ajax']))
-            $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : Yii::app()->user->returnUrl);
+        $this->redirect(Yii::app()->user->returnUrl);
     }
 
     public function loadModel($id)
@@ -69,6 +66,12 @@ class ContactController extends Controller
             throw new CHttpException(404, 'The requested page does not exist.');
         return $model;
     }
+
+
+
+
+
+
 
     public function filters()
     {
@@ -89,6 +92,7 @@ class ContactController extends Controller
             ),
         );
     }
+
 
 
 

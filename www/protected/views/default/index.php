@@ -24,7 +24,7 @@ $this->widget('zii.widgets.CListView', array(
         'itemView' => '_contactViewPartial',
         'emptyText' => "No contacts found.",
         'enablePagination' => true,
-        'summaryText' => '',
+        //'summaryText' => '',
     )
 );
 ?>

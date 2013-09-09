@@ -5,8 +5,11 @@
 
 .list-view .summary
 {
-	margin: 0 0 5px 0;
+	margin: -10px 0 5px 0;
 	text-align: right;
+    font-size: 10px;
+    float: right;
+    clear: both;
 }
 
 .list-view .sorter
