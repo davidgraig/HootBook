@@ -34,8 +34,8 @@
     <div id="mainmenu">
         <?php $this->widget('zii.widgets.CMenu', array(
             'items' => array(
-                array('label' => 'Edit Profile', 'url' => array('/user/update/' . Yii::app()->user->id), 'visible' => !Yii::app()->user->isGuest),
                 array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/default/logout'), 'visible' => !Yii::app()->user->isGuest),
+                array('label' => 'Edit Profile', 'url' => array('/user/update/' . Yii::app()->user->id), 'visible' => !Yii::app()->user->isGuest),
             ),
         )); ?>
     </div>

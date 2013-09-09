@@ -1,4 +1,4 @@
-<h1>Update <?php echo $model->getFullName(); ?></h1>
+<h2><?php echo $model->getFullName(); ?></h2>
 
 <div class="form">
 

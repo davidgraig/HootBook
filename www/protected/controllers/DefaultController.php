@@ -105,6 +105,17 @@ class DefaultController extends Controller
         $this->redirect(Yii::app()->getHomeUrl());
     }
 
+    public function actionError()
+    {
+        if($error=Yii::app()->errorHandler->error)
+        {
+            if(Yii::app()->request->isAjaxRequest)
+                echo $error['message'];
+            else
+                $this->render('error', $error);
+        }
+    }
+
     public function actions()
     {
         return array(
