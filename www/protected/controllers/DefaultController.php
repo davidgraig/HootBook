@@ -82,7 +82,7 @@ class DefaultController extends Controller
                         }
                     }
                 } else {
-                    Yii::app()->user->setFlash('error', "The user already exists");
+                    Yii::app()->user->setFlash('error', "A user with that email address already exists.");
                 }
             } else {
                 Yii::app()->user->setFlash('error', "The form has errors, please fix them");

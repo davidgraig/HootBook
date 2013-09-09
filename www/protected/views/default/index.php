@@ -54,10 +54,12 @@ $this->widget('zii.widgets.CListView', array(
     <div>
         <?php echo $form->labelEx($newContact, 'phone'); ?>
         <?php $this->widget('CMaskedTextField', array(
-            'model' => $newContact,
-            'attribute' => 'phone',
-            'mask' => '(999) 999-9999'
-        )); ?>
+                'model' => $newContact,
+                'attribute' => 'phone',
+                'mask' => '(999) 999-9999',
+                'htmlOptions' => array('autocomplete' => 'off')
+            )
+        ); ?>
         <?php echo $form->error($newContact, 'phone'); ?>
     </div>
 
