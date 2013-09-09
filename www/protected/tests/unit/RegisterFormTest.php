@@ -14,7 +14,9 @@ class RegisterFormTest extends CDbTestCase
 
         $dbUser = User::model()->findByPk($user->id);
 
-        $this->getFixtureManager()->truncateTables('user');
+        $this->assertEquals($user->email, $dbUser->email);
+
+        $this->getFixtureManager()->truncateTable('user');
 
     }
 
