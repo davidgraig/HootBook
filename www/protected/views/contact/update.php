@@ -29,7 +29,11 @@
 
     <div class="row">
         <?php echo $form->labelEx($model,'phone'); ?>
-        <?php echo $form->textField($model,'phone'); ?>
+        <?php $this->widget('CMaskedTextField', array(
+            'model' => $model,
+            'attribute' => 'phone',
+            'mask' => '(999) 999-9999'
+        )); ?>
         <?php echo $form->error($model,'phone'); ?>
     </div>
 

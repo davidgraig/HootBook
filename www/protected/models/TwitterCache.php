@@ -17,6 +17,7 @@ class TwitterCache extends CActiveRecord
             array('handle, followers, last_update', 'required'),
             array('followers', 'numerical', 'integerOnly' => true),
             array('handle, image', 'length', 'max' => 255),
+            array('handle, followers, last_update', 'filter', 'filter' => array(new CHtmlPurifier(), 'purify')),
         );
     }
 

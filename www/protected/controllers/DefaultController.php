@@ -2,7 +2,7 @@
 
 class DefaultController extends Controller
 {
-    public function actionIndex()
+    public function actionIndex($search = '')
     {
         if (Yii::app()->user->isGuest) {
             $this->render('login', array(
@@ -16,14 +16,18 @@ class DefaultController extends Controller
             $twitter_cache->refreshCache();
 
             $dataProvider = new CActiveDataProvider('Contact', array(
-                'criteria' => array(
-                    'condition' => 'user_id = ' . Yii::app()->user->id,
-                    'order' => 'last_name DESC',
-                ),
                 'pagination' => array(
-                    'pageSize' => 20,
+                    'pageSize' => 5,
                 ),
             ));
+
+            $criteria = new CDbCriteria();
+            $criteria->addSearchCondition('last_name', $search, true, 'OR');
+            $criteria->addSearchCondition('first_name', $search, true, 'OR');
+            $criteria->addSearchCondition('twitter', $search, true, 'OR');
+            $criteria->addCondition('user_id = ' . Yii::app()->user->id);
+            $criteria->order = 'last_name DESC';
+            $dataProvider->setCriteria($criteria);
 
             $this->render('index', array(
                     'dataProvider' => $dataProvider,

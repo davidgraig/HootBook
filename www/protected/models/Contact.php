@@ -49,8 +49,7 @@ class Contact extends CActiveRecord
             array('user_id, first_name, last_name, phone, twitter', 'required'),
             array('user_id, favorite', 'numerical', 'integerOnly' => true),
             array('first_name, last_name, twitter', 'length', 'max' => 255),
-            // The following rule is used by search().
-            // @todo Please remove those attributes that should not be searched.
+            array('first_name, last_name, phone, twitter', 'filter', 'filter' => array(new CHtmlPurifier(), 'purify')),
             array('first_name, last_name, phone, twitter', 'safe', 'on' => 'search'),
         );
     }

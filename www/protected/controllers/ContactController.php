@@ -9,7 +9,7 @@ class ContactController extends Controller
         if (isset($_POST['Contact'])) {
             $model->attributes = $_POST['Contact'];
             $model->user_id = $userId;
-            $model->twitter = ltrim($model->twitter, '@');
+            $model->twitter = ltrim(trim($model->twitter), '@');
 
             if ($model->save()) {
                 $this->updateTwitterCache($model);
@@ -33,9 +33,10 @@ class ContactController extends Controller
         $model = $this->loadModel($id);
 
         if (isset($_POST['Contact'])) {
+
             $model->attributes = $_POST['Contact'];
 
-            $model->twitter = ltrim($model->twitter, '@');
+            $model->twitter = ltrim(trim($model->twitter), '@');
 
             if ($model->save()) {
 

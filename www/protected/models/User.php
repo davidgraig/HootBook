@@ -38,6 +38,7 @@ class User extends CActiveRecord
                 'on' => 'insert'),
             array('name, password, email', 'length', 'max' => 255),
             array('name, email', 'safe', 'on' => 'search'),
+            array('name, email', 'filter', 'filter' => array(new CHtmlPurifier(), 'purify')),
         );
     }
 

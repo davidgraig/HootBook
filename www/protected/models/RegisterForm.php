@@ -6,13 +6,15 @@ class RegisterForm extends CFormModel
     public $password;
     public $email;
     public $verifyCode;
+    public $captcha;
 
     public function rules()
     {
         return array(
-            array('name, password, email', 'required'),
+            array('name, password, email, verifyCode', 'required'),
             array('email', 'email'),
             array('verifyCode', 'captcha', 'allowEmpty' => CCaptcha::checkRequirements()),
+            array('name, email', 'filter', 'filter' => array(new CHtmlPurifier(), 'purify')),
         );
     }
 

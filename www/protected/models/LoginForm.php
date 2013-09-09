@@ -21,13 +21,11 @@ class LoginForm extends CFormModel
     public function rules()
     {
         return array(
-            // username and password are required
             array('email, password', 'required'),
-            // rememberMe needs to be a boolean
             array('email', 'email'),
             array('rememberMe', 'boolean'),
-            // password needs to be authenticated
             array('password', 'authenticate'),
+            array('email, rememberMe', 'filter', 'filter' => array(new CHtmlPurifier(), 'purify')),
         );
     }
 
