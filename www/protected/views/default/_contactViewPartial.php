@@ -19,7 +19,7 @@
                 }
                 else if ($followers === TwitterCache::NEVER_UPDATED)
                 {
-                    echo "<span class='unknown-twitter'>???</span>";
+                    echo "<span class='unknown-twitter'>couldn't retrieve follower count - check back later.</span>";
                 }
                 else
                 {
