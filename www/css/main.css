@@ -316,9 +316,10 @@ div.list-view div.items .empty
     margin-left: 20px;
 }
 
-.list-view .summary
+.list-view .summary, .list-view .sorter
 {
     margin: -10px 0 5px 0;
+    padding: 5px 0 0 0;
     text-align: right;
     font-size: 10px;
     float: right;

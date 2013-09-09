@@ -15,7 +15,7 @@ Yii::app()->clientScript->registerScript('search',
 });");
 ?>
 <div id="contact-search">
-    <b><label for="search">Search: </label></b>
+    <b><label for="search">Search Contact Name: </label></b>
     <input type="text" id="search" name="search" />
 </div>
 <?php
@@ -24,7 +24,12 @@ $this->widget('zii.widgets.CListView', array(
         'itemView' => '_contactViewPartial',
         'emptyText' => "No contacts found.",
         'enablePagination' => true,
-        //'summaryText' => '',
+        'sortableAttributes' => array(
+            'first_name' => 'First Name',
+            'last_name' => 'Last Name',
+            'twitter' => 'Twitter Handle',
+            'phone',
+        ),
     )
 );
 ?>
