@@ -315,3 +315,12 @@ div.list-view div.items .empty
 {
     margin-left: 20px;
 }
+
+.list-view .summary
+{
+    margin: -10px 0 5px 0;
+    text-align: right;
+    font-size: 10px;
+    float: right;
+    clear: both;
+}
