@@ -23,7 +23,7 @@
                 }
                 else
                 {
-                    echo $followers . ' followers';
+                    echo number_format($followers) . ' followers';
                 }
                 ?>
             )

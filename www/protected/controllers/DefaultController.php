@@ -26,11 +26,12 @@ class DefaultController extends Controller
             ));
 
             $criteria = new CDbCriteria();
+            $criteria->addCondition('user_id = ' . Yii::app()->user->id);
             $criteria->addSearchCondition('last_name', $search, true, 'OR');
             $criteria->addSearchCondition('first_name', $search, true, 'OR');
             $criteria->addSearchCondition('twitter', $search, true, 'OR');
-            $criteria->addCondition('user_id = ' . Yii::app()->user->id);
-            $criteria->order = 'last_name DESC';
+            $criteria->addSearchCondition('phone', $search, true, 'OR');
+            $criteria->order = 'last_name ASC';
             $dataProvider->setCriteria($criteria);
 
             $this->render('index', array(
